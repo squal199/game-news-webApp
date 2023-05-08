@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import apiClient from "../services/api-client";
-import {CanceledError} from "axios"
+
 import useData from "./useData";
 
 export interface Platform {
@@ -17,7 +15,5 @@ export interface Game {
     metacritic: number;
   }
   
-
-
-const useGames = () => useData<Game>("/games")
+const useGames = () => useData<Game>("/games");
 export default useGames;
